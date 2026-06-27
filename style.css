@@ -380,3 +380,90 @@ html {
 .lang-toggle:active {
     transform: scale(0.97);
 }
+/* Nowe reguły dla smartfonów */
+@media (max-width: 600px) {
+    /* Navbar / Header */
+    header {
+        top: 10px; /* Bliżej górnej krawędzi */
+    }
+
+    .navbar {
+        width: 95%; /* Więcej przestrzeni na boki */
+        margin: 10px auto;
+        padding: 12px 16px;
+        flex-direction: column; /* Układ pionowy na wypadek wielu elementów */
+        gap: 12px;
+        border-radius: 20px;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* W razie potrzeby przyciski przejdą do nowej linii */
+        gap: 8px;
+    }
+
+    .glass-btn, .primary-btn, .lang-toggle {
+        padding: 10px 16px; /* Mniejsze przyciski dla kciuka */
+        font-size: 0.85rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Nadpisanie clamp(), który mógłby być za duży */
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Przyciski jeden pod drugim – łatwiej kliknąć */
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .hero-buttons button {
+        width: 100%; /* Przyciski na pełną szerokość */
+    }
+
+    /* Telefon / Wizualizacja */
+    .phone {
+        height: auto; /* Koniec ze sztywnym 700px */
+        max-height: 400px;
+        padding: 10px;
+    }
+
+    .phone-card {
+        padding: 10px;
+    }
+
+    /* Sekcje z projektami */
+    .projects {
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+        text-align: center; /* Wyśrodkowany nagłówek ładniej wygląda na mobile */
+    }
+
+    .cards {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
